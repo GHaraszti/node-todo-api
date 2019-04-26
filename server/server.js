@@ -41,6 +41,8 @@ var {User} = require('./models/user');
 
 var app = express();
 
+module.exports = {app};
+
 app.use(bodyParser.json());
 
 app.post('/todos', (req, res) => {
@@ -59,5 +61,4 @@ app.post('/todos', (req, res) => {
 app.listen(3000, () => {
      console.log('Started on port 3000');
 });
-
 
